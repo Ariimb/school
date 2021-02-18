@@ -102,3 +102,83 @@ int main() {
 
 	return(0);
 }
+
+Example 5.6 full2/full2.c
+#include <stdio.h>
+#include <string.h>
+
+char mystring[30];
+char nombre[10];
+char last[10];
+int mylen; //lenght of the string
+
+int main(void) 
+{
+  printf("enter first name/ ingrese nombre: ");
+  fgets(nombre,sizeof(nombre),stdin);
+  mylen = strlen(nombre);
+  printf("mylen is %d\n",mylen);
+  nombre[mylen-1] = '\0';
+  printf("enter last/ ingrese apellido: ");
+  fgets(last,sizeof(last),stdin);
+  mylen = strlen(last);
+  last[mylen-1] = '\0';
+  printf("mylen2 is %d\n",mylen);
+  strcpy(mystring,nombre);
+  strcat(mystring," ");
+  strcat(mystring,last);
+  printf("the full name is %s \n", mystring);
+  return 0;
+}
+
+Matrix
+#include <stdio.h>
+
+int array[3]={11,12,13};
+
+int matrix[3][2];
+
+int main(void) {
+
+  matrix[0][0]=11;
+  matrix[0][1]=12;
+  matrix[1][0]=13;
+  matrix[1][1]=22;
+  matrix[2][0]=23;
+  matrix[2][1]=24;
+
+  
+  printf("matrix[row %d] ",0);
+  printf("%d ",matrix[0][0]);
+  printf("%d ",matrix[0][1]);
+  printf("\n");
+
+  printf("matrix[row %d] ",1);
+  printf("%d ",matrix[1][0]);
+  printf("%d ",matrix[1][1]);
+  printf("\n");
+
+  printf("matrix[row %d] ",2);
+  printf("%d ",matrix[2][0]);
+  printf("%d ",matrix[2][1]);
+  printf("\n");
+
+  return 0;
+}
+
+Example 5.8 double/double.c
+#include <stdio.h>
+char  line[100];   /* input line from console */
+int   value;       /* a value to double */
+
+int main()
+{
+    printf("Enter a value: ");
+
+    fgets(line, sizeof(line), stdin);
+    sscanf(line, "%d", &value);
+
+    printf("Twice %d is %d\n", value, value * 2);
+    return (0);
+}
+
