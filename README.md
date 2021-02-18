@@ -182,3 +182,55 @@ int main()
     return (0);
 }
 
+Calculate area and perimeter of a rectangle and a circle
+
+#include <stdio.h>
+#include <conio.h>
+ 
+int main(){
+    float length, width, area;
+    printf("Enter length of Rectangle\n");
+    scanf("%f", &length);
+    printf("Enter width of Rectangle\n");
+    scanf("%f", &width);
+    /* Area of Rectangle = Length X Width */
+    area = length * width;
+    printf("Area of Rectangle : %0.4f\n", area);
+     
+    getch();
+    return 0;
+}
+
+#include<stdio.h>
+int main() {
+	float radius, area;
+	printf("\nEnter the radius of Circle : ");
+	scanf("%d", &radius);
+	area = 3.14 * radius * radius;
+	printf("\nArea of Circle : %f", area);
+	return (0);
+}
+
+Average of 5 numbers
+
+#include <stdio.h>
+
+int main()
+{
+    int num; // Declare 'num' to read number from users
+    int sum, i; // Declare variables 'sum' to keep sum of numbers & 'i' used in for loop
+    float average; // Declae variable 'average' of float type to save average value  
+    
+    printf("Enter five numbers: "); // Display message to enter numbers
+    
+    for(i=0; i<5; i++){    // Loop for 5 times 
+        scanf("%d", &num); // Read number
+        sum = sum + num;   // Add into 'sum'
+    }
+    
+    average = sum/(float)5;  // Calculate average by dividing 'sum' by 5
+    
+    printf("Average = %f", average); // Display average 
+    
+    return 0;
+}
